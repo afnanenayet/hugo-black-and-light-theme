@@ -2,7 +2,7 @@
 
 <section id=content>
   <ul class=posts_listing>
-    {{ range .Site.RegularPages }}
+    {{ range (where .Site.RegularPages "Section" "posts") }}
       <li>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <div id=date>
@@ -14,4 +14,3 @@
 </section>
 
 {{ partial "footer.html" . }}
-

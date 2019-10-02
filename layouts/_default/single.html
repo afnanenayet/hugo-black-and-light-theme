@@ -1,28 +1,17 @@
 {{ partial "header.html" . }}
 
 <section id=content>
-  <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
+    <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
 
-  {{ if .Params.date }}
+    {{ if .Params.date }}
     <div id=sub-header>
-      {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minute read
+        {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minute read
     </div>
-  {{ end }}
-
-  <div class="entry-content">
-    {{ .Content }}
-  </div>
-
-  <div id=links>
-    {{ if .PrevInSection }}
-      <a class="basic-alignment left" href="{{.PrevInSection.Permalink}}">&laquo; {{.PrevInSection.Title}}</a>
     {{ end }}
-    {{ if .NextInSection }}
-      <a class="basic-alignment left" href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}} &raquo;</a>
-    {{ end }}
-  </div>
+
+    <div class="entry-content">
+        {{ .Content }}
+    </div>
 </section>
 
 {{ partial "footer.html" . }}
-
-
