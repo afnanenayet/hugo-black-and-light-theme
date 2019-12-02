@@ -425,7 +425,7 @@ ul li:before {
 
 /* light mode syntax highlighting (github) */
 
-/* Background */ .chroma { background-color: #ffffff }
+/* Background */ .chroma { background-color: #f7f7f7 }
 /* Error */ .chroma .err { color: #a61717; background-color: #e3d2d2 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
@@ -500,7 +500,7 @@ ul li:before {
 
 /* dark mode syntax highlighting (monokai dark) */
 @media (prefers-color-scheme: dark) {
-/* Background */ .chroma { color: #f8f8f2; background-color: #272822 }
+/* Background */ .chroma { color: #f8f8f2; background-color: #262626 }
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
