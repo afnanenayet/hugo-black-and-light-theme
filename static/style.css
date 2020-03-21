@@ -226,22 +226,18 @@ li {
     margin-left: 20px;
 }
 
-ul li {
-    margin-left: 5px;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-ul li:before {
-    content: "— ";
-}
-
 #nav ul li:before,
 .posts_listing li:before {
     content: '';
     margin-right: 0;
+}
+
+.posts_listing ul {
+    list-style-type: none;
+}
+
+.posts_listing li {
+    list-style-type: none;
 }
 
 #content {
