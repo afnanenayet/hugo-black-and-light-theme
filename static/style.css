@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'Open Sans', sans-serif;
-    font-display: auto;
+    font-display: swap;
     src: local('Open Sans'), url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 }
 
