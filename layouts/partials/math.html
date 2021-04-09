@@ -2,7 +2,7 @@
 <link 
     rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/katex@{{ .Site.Params.katexVersion }}/dist/katex.min.css"
-    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" 
+    integrity="sha256-nZMkCZIQ6Pc6G9IMfJIZliHOBx9VzzpEPefjxb5qTd8="
     crossorigin="anonymous"
 >
 
@@ -10,7 +10,7 @@
 <script 
     defer 
     src="https://cdn.jsdelivr.net/npm/katex@{{ .Site.Params.katexVersion }}/dist/katex.min.js"
-    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    integrity="sha256-ja6kQRpKH+e4SPK9ZulQL+U4p3nA4TQqfZK3sO0GW2A="
     crossorigin="anonymous"
 >
 </script>
@@ -19,16 +19,25 @@
 <script 
     defer 
     src="https://cdn.jsdelivr.net/npm/katex@{{ .Site.Params.katexVersion }}/dist/contrib/auto-render.min.js"
-    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"
+    integrity="sha256-G53bYZLObbTLTA3j70xRGPKxKYlBbzvDZ789B6sSFkE="
     crossorigin="anonymous"
-    onload="renderMathInElement(document.body, { 
-        options: [
-          {left: '$', right: '$', display: false},
-          {left: '$$', right: '$$', display: true},
-          {left: '\(', right: '\)', display: false},
-          {left: '\[', right: '\]', display: true}
-        ]
-    });"
 >
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
 </script>
 {{ end }}
