@@ -311,6 +311,16 @@ li {
     text-align: center;
 }
 
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;   
+}
+
+.disabled {
+    visibility: hidden;
+}
+
 #not-found a {
     font-family: "Old Standard TT", serif;
     font-size: 200px;
